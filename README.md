@@ -10,6 +10,12 @@
 npx exemption-iq-installer install
 ```
 
+## ⚠️ Important Note
+
+This package is built specifically for Avalara AvaTax account holders and integrates directly with CertCapture and GenCert services.
+
+**Not an AvaTax customer yet?** You may still be able to leverage this package for your exemption workflows. If you're interested in integrating Exemption IQ into your own platform but do not have an AvaTax account, please contact the Tax CSA team to discuss partnership opportunities or potential alternative integrations.
+
 ## 🔍 What is Exemption IQ?
 
 Exemption IQ is a Tax CSA plugin that simplifies exemption certificate management by providing:
