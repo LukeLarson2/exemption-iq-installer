@@ -3,8 +3,6 @@
 > 🧩 Securely install and scaffold [Exemption IQ](https://www.taxcsa.com) for simplified exemption certificate management with Avalara Avatax.
 
 [![npm version](https://img.shields.io/npm/v/exemption-iq-installer.svg?style=flat-square)](https://www.npmjs.org/package/exemption-iq-installer)
-[![install size](https://img.shields.io/bundlephobia/min/exemption-iq-installer?style=flat-square)](https://bundlephobia.com/result?p=exemption-iq-installer)
-[![license](https://img.shields.io/npm/l/exemption-iq-installer?style=flat-square)](https://github.com/taxcsa/exemption-iq-installer/blob/main/LICENSE)
 
 ## 🚀 Quick Start
 
@@ -101,7 +99,3 @@ This will:
 Tax CSA provides high-compliance sales tax automation services. Exemption IQ is one of our developer-first tools to simplify Avalara integrations.
 
 ➡️ Visit us at [https://www.taxcsa.com](https://www.taxcsa.com)
-
-## 📄 License
-
-MIT
