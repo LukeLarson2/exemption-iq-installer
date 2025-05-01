@@ -1,0 +1,15 @@
+{
+  "name": "exemption-iq-installer",
+  "version": "1.0.5",
+  "description": "Secure installer for the Exemption IQ CLI",
+  "bin": {
+    "install-eiq": "bin/install.js"
+  },
+  "type": "module",
+  "dependencies": {
+    "execa": "^7.1.1",
+    "exemption-iq": "file:../../../tmp/eiq-install-5VGNuu/extracted/package",
+    "node-fetch": "^3.3.2",
+    "prompts": "^2.4.2"
+  }
+}
