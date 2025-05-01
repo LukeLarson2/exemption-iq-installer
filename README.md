@@ -72,7 +72,7 @@ $ npx exemption-iq-installer install
 To completely remove Exemption IQ:
 
 ```bash
-npx exemption-iq-installer uninstall
+node vendor/exemption-iq/dist/bin/init.js --uninstall
 ```
 
 This will:
@@ -101,3 +101,7 @@ This will:
 Tax CSA provides high-compliance sales tax automation services. Exemption IQ is one of our developer-first tools to simplify Avalara integrations.
 
 ➡️ Visit us at [https://www.taxcsa.com](https://www.taxcsa.com)
+
+## 📄 License
+
+MIT

@@ -1,6 +1,6 @@
 {
   "name": "exemption-iq-installer",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "Secure installer for the Exemption IQ CLI",
   "bin": {
     "install-eiq": "bin/install.js"
