@@ -7,7 +7,7 @@
 ## 🚀 Quick Start
 
 ```bash
-npx exemption-iq-installer install
+npx exemption-iq-installer
 ```
 
 ## ⚠️ Important Note
@@ -58,7 +58,7 @@ The installer will:
 ## 📺 Example Installation
 
 ```bash
-$ npx exemption-iq-installer install
+$ npx exemption-iq-installer
 
 📦 Welcome to the Exemption IQ installer
 ✔ Username: …
@@ -70,6 +70,95 @@ $ npx exemption-iq-installer install
 📦 Installing dependencies...
 🎉 Done!
 ```
+
+## 🌐 Environment Variables
+
+Set the following environment variables in your server environment:
+
+```env
+EIQ_USERNAME=your-eiq-username
+EIQ_PASSWORD=your-eiq-password
+AVATAX_API_BASE=https://sandbox-rest.avatax.com/api/v2  # or https://rest.avatax.com/api/v2 for production
+```
+
+✅ Use the sandbox API base during development to validate the end-to-end user experience before going live.
+
+## 🧠 Framework Support
+
+| Framework | Scaffolded Path |
+|-----------|-----------------|
+| Next.js   | `app/api/exemption-iq/` or `pages/api/` |
+| Remix     | `app/routes/api/exemption-iq/` |
+| Astro     | `src/pages/api/exemption-iq/` |
+| Express   | `src/api/exemption-iq/` |
+| Generic   | `api/exemption-iq/` |
+
+## 🧩 Using the ExemptionIqServer Component
+
+Example usage (Next.js Server Component):
+
+```tsx
+import { ExemptionIqServer } from 'exemption-iq';
+
+export default function Page() {
+  return (
+    <ExemptionIqServer
+      customerCode={customerCode}
+      customerInfo={{
+        name: "Company Name",
+        emailAddress: "email@example.com",
+        addressLine1: "123 Main St",
+        phoneNumber: "555-555-5555",
+        city: "Orlando",
+        country: "USA",
+        postalCode: "32801",
+        region: "FL"
+      }}
+      state="Florida"
+      primaryColor="#2966B1"
+      autoValidateCertificate={true}
+      onComplete={(status) => {
+        console.log("Certificate status:", status);
+        return true;
+      }}
+    />
+  );
+}
+```
+
+### 🔑 Required Fields for customerInfo
+
+```json
+{
+  "name": "string",
+  "emailAddress": "string",
+  "addressLine1": "string",
+  "phoneNumber": "string",
+  "city": "string",
+  "country": "string",
+  "postalCode": "string",
+  "region": "string" // State abbreviation (e.g., "FL")
+}
+```
+
+### ⚙️ Component Prop Reference
+
+| Prop Name | Type | Default | Description |
+|-----------|------|---------|-------------|
+| customerCode | string | — | Unique customer code specific to your company |
+| customerInfo | object | — | Contains customer contact and address details |
+| state | string | — | Full state name (e.g., "Florida") |
+| styles | object | optional | Custom style object |
+| showDownload | boolean | false | Allow users to download the certificate post-submission |
+| autoValidateCertificate | boolean | true | Automatically validates certificate on submit |
+| enableGenCertModal | boolean | true | Displays GenCert as a modal (false embeds it inline) |
+| buttonText | string | — | Custom text for the action button |
+| buttonTextColor | string | — | Color of the button text |
+| primaryColor | string | #2966B1 | Primary color of the button |
+| dangerColor | string | #E76F51 | Color used for danger actions |
+| successColor | string | #14AE5C | Color used for success indicators |
+| buttonStyles | string | — | Inline CSS for custom button styling |
+| onComplete | (boolean) => boolean | — | Callback when the certificate is uploaded/updated |
 
 ## 🧹 Uninstallation
 
@@ -84,21 +173,15 @@ This will:
 - Unpatch `package.json`
 - Delete scaffolded API routes
 
-## 🧠 Framework Support
-
-| Framework | Scaffolded Path |
-|-----------|-----------------|
-| Next.js   | `app/api/exemption-iq/` or `pages/api/` |
-| Remix     | `app/routes/api/exemption-iq/` |
-| Astro     | `src/pages/api/exemption-iq/` |
-| Express   | `src/api/exemption-iq/` |
-| Generic   | `api/exemption-iq/` |
-
 ## 👥 Who Should Use This?
 
 - Engineers integrating Avalara exemption workflows
 - Teams using GenCert or CertCapture
 - Projects needing easy, secure plug-in of exemption logic and API
+
+## 📜 Licensing & Access
+
+This package is licensed through Tax CSA and requires an ExemptionIQ authenticated user account to download and install.
 
 ## 🛡️ Powered by Tax CSA
 
