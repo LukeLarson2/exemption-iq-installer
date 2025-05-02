@@ -4,17 +4,20 @@
 
 [![npm version](https://img.shields.io/npm/v/exemption-iq-installer.svg?style=flat-square)](https://www.npmjs.org/package/exemption-iq-installer)
 
+
 ## 🚀 Quick Start
 
 ```bash
 npx exemption-iq-installer
 ```
 
+
 ## ⚠️ Important Note
 
 This package is built specifically for Avalara AvaTax account holders and integrates directly with CertCapture and GenCert services.
 
 **Not an AvaTax customer yet?** You may still be able to leverage this package for your exemption workflows. If you're interested in integrating Exemption IQ into your own platform but do not have an AvaTax account, please contact the Tax CSA team to discuss partnership opportunities or potential alternative integrations.
+
 
 ## 🔍 What is Exemption IQ?
 
@@ -24,6 +27,7 @@ Exemption IQ is a Tax CSA plugin that simplifies exemption certificate managemen
 - **Avalara's CertCapture** connection
 - **Client- and server-side components** for exemption workflows
 - **Framework compatibility** with Next.js, Remix, Express, Astro, and more
+
 
 ## ✨ Features
 
@@ -35,6 +39,7 @@ Exemption IQ is a Tax CSA plugin that simplifies exemption certificate managemen
 - 🛠️ **package.json patching** with vendor dependencies
 - 🔒 **Version control setup** (adds `vendor/` to `.gitignore`)
 - 📚 **Component library** installation and configuration
+
 
 ## 📋 Installation Process
 
@@ -54,6 +59,7 @@ The installer will:
 4. Add `vendor/` to `.gitignore`
 5. Scaffold framework-specific API routes
 6. Run `npm install` to complete setup
+
 
 ## 📺 Example Installation
 
@@ -83,6 +89,7 @@ AVATAX_API_BASE=https://sandbox-rest.avatax.com/api/v2  # or https://rest.avatax
 
 ✅ Use the sandbox API base during development to validate the end-to-end user experience before going live.
 
+
 ## 🧠 Framework Support
 
 | Framework | Scaffolded Path |
@@ -92,6 +99,24 @@ AVATAX_API_BASE=https://sandbox-rest.avatax.com/api/v2  # or https://rest.avatax
 | Astro     | `src/pages/api/exemption-iq/` |
 | Express   | `src/api/exemption-iq/` |
 | Generic   | `api/exemption-iq/` |
+
+
+## 🖼️ Component Previews (Next.js)
+
+Visual examples of Exemption IQ components integrated into a Next.js framework:
+
+🛒 ExemptionIq Button at Checkout
+![ExemptionIq Button at Checkout](https://emihnyognhhrgcemahdh.supabase.co/storage/v1/object/public/eiq-package-screens//next-checkout-button.png)
+
+🧾 Customer Has a Certificate in the State Dialog
+![Customer Has a Certificate in the State Dialog](https://emihnyognhhrgcemahdh.supabase.co/storage/v1/object/public/eiq-package-screens//next-already-own-cert.png)
+
+✅ ExemptionIq Tax Exempt on Callback
+![ExemptionIq Tax Exempt on Callback](https://emihnyognhhrgcemahdh.supabase.co/storage/v1/object/public/eiq-package-screens//next-exempt.png)
+
+📋 ExemptionIq Customer Certificate Management Table
+![ExemptionIq Customer Certificate Management Table](https://emihnyognhhrgcemahdh.supabase.co/storage/v1/object/public/eiq-package-screens//next-customer-table.png)
+
 
 ## 🧩 Using an ExemptionIQ Component
 
@@ -133,6 +158,7 @@ export default function Page() {
 }
 ```
 
+
 ### 🔑 Required Fields for customerInfo
 
 ```json
@@ -147,6 +173,7 @@ export default function Page() {
   "region": "string" // State abbreviation (e.g., "FL")
 }
 ```
+
 
 ### ⚙️ Component Prop Reference
 
@@ -166,6 +193,7 @@ export default function Page() {
 | buttonStyles | string | — | Inline CSS for custom button styling |
 | onComplete | (boolean) => boolean | — | Callback when the certificate is uploaded/updated |
 
+
 ## 🧹 Uninstallation
 
 To completely remove Exemption IQ:
@@ -179,15 +207,18 @@ This will:
 - Unpatch `package.json`
 - Delete scaffolded API routes
 
+
 ## 👥 Who Should Use This?
 
 - Engineers integrating Avalara exemption workflows
 - Teams using GenCert or CertCapture
 - Projects needing easy, secure plug-in of exemption logic and API
 
+
 ## 📜 Licensing & Access
 
 This package is licensed through Tax CSA and requires an ExemptionIQ authenticated user account to download and install.
+
 
 ## 🛡️ Powered by Tax CSA
 
