@@ -123,7 +123,7 @@ export default function Page() {
       }}
       state="Florida"
       primaryColor="#2966B1"
-      autoValidateCertificate={true}
+      manualValidation={true}
       onComplete={(status) => {
         console.log("Certificate status:", status);
         return true;
@@ -156,7 +156,7 @@ export default function Page() {
 | customerInfo | object | — | Contains customer contact and address details |
 | state | string | — | Full state name (e.g., "Florida") |
 | showDownload | boolean | false | Allow users to download the certificate post-submission |
-| autoValidateCertificate | boolean | true | Automatically validates certificate on submit |
+| manualValidation | boolean | true | Manual validation required on certificates on submit |
 | enableGenCertModal | boolean | true | Displays GenCert as a modal (false embeds it inline) |
 | buttonText | string | — | Custom text for the action button |
 | buttonTextColor | string | — | Color of the button text |
