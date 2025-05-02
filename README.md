@@ -2,7 +2,7 @@
 
 > 🧩 Securely install and scaffold [Exemption IQ](https://www.taxcsa.com) for simplified exemption certificate management with Avalara Avatax.
 
-[![npm version](https://img.shields.io/npm/v/exemption-iq-installer.svg?style=flat-square)](https://www.npmjs.org/package/exemption-iq-installer)
+[![npm version](https://img.shields.io/npm/v/exemption-iq-installer.svg?style=flat-square)](https://www.npmjs.org/package/exemption-iq-installer) ![Read time](https://img.shields.io/badge/read--time-3%20min-blue?style=flat-square)
 
 
 ## 🚀 Quick Start
