@@ -148,7 +148,6 @@ export default function Page() {
 | customerCode | string | — | Unique customer code specific to your company |
 | customerInfo | object | — | Contains customer contact and address details |
 | state | string | — | Full state name (e.g., "Florida") |
-| styles | object | optional | Custom style object |
 | showDownload | boolean | false | Allow users to download the certificate post-submission |
 | autoValidateCertificate | boolean | true | Automatically validates certificate on submit |
 | enableGenCertModal | boolean | true | Displays GenCert as a modal (false embeds it inline) |
