@@ -93,7 +93,14 @@ AVATAX_API_BASE=https://sandbox-rest.avatax.com/api/v2  # or https://rest.avatax
 | Express   | `src/api/exemption-iq/` |
 | Generic   | `api/exemption-iq/` |
 
-## 🧩 Using the ExemptionIqServer Component
+## 🧩 Using an ExemptionIQ Component
+
+| Component | Use |
+|-----------|-----------------|
+| ExemptionIqServer   | Add Certificate button in checkout for a server component |
+| ExemptionIqClient     | Add Certificate button in checkout for a client component |
+| ExemptionIqCustomerServer     | Customer Managment Table for a server component |
+| ExemptionIqCustomerClient   | Customer Managment Table for a server component |
 
 Example usage (Next.js Server Component):
 
