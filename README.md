@@ -29,6 +29,36 @@ Exemption IQ is a Tax CSA plugin that simplifies exemption certificate managemen
 - **Framework compatibility** with Next.js, Remix, Express, Astro, and more
 
 
+## 🔄 Compatibility
+
+Exemption IQ integrates directly with **Avalara CertCapture/ECM**, ensuring that every time a certificate is added or updated, **AvaTax** automatically adjusts the customer's taxability profile. 
+
+If your accounting or billing platform is connected to AvaTax, those changes flow through instantly—keeping your systems accurate and compliant with zero manual input.
+
+
+### ✅ Automatic Taxability Updates With:
+
+- **QuickBooks Online & Desktop**
+- **Chargebee**
+- **Magento**
+- **NetSuite**
+- **Xero**
+- **Sage Intacct**
+- **Shopify Plus**
+- **Microsoft Dynamics 365**
+- **Zoho Books**
+- **BigCommerce**
+- **SAP Business One & S/4HANA**
+
+> ✅ All platforms listed above support AvaTax integration.
+
+### 🛠️ Not Using AvaTax?
+
+If you're not leveraging AvaTax in your stack, Exemption IQ provides a **callback** which can be passed. This feature returns real-time success/failure responses upon certificate updates, empowering your systems to handle taxability logic on your terms.
+
+Whether integrated or standalone, Exemption IQ keeps your tax compliance workflows efficient and flexible.
+
+
 ## ✨ Features
 
 - 🔐 **Secure authentication** with your Tax CSA credentials
