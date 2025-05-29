@@ -114,6 +114,7 @@ Set the following environment variables in your server environment:
 ```env
 EIQ_USERNAME=your-eiq-username
 EIQ_PASSWORD=your-eiq-password
+AVATAX_COMPANY_CODE=your-avatax-company-code
 AVATAX_API_BASE=https://sandbox-rest.avatax.com/api/v2  # or https://rest.avatax.com/api/v2 for production
 ```
 
