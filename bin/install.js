@@ -83,6 +83,14 @@ import { pipeline } from "stream/promises";
       throw new Error("Extracted package is missing package.json");
     }
 
+    // Remove 'dependencies' from the extracted package.json to prevent nested node_modules
+    let extractedPkgJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf-8"));
+    if (extractedPkgJson.dependencies) {
+      delete extractedPkgJson.dependencies;
+      fs.writeFileSync(packageJsonPath, JSON.stringify(extractedPkgJson, null, 2));
+      console.log("🧹 Removed 'dependencies' from extracted package.json");
+    }
+
     // 🔧 Patch root package.json
     const rootPackagePath = path.join(projectRoot, "package.json");
     if (fs.existsSync(rootPackagePath)) {
@@ -91,9 +99,9 @@ import { pipeline } from "stream/promises";
       rootPackageJson.dependencies["exemption-iq"] = "file:vendor/exemption-iq";
 
       // Add peer dependencies from the downloaded package
-      const downloadedPkgJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf-8"));
-      if (downloadedPkgJson.peerDependencies) {
-        for (const [name, version] of Object.entries(downloadedPkgJson.peerDependencies)) {
+      // Use the modified extractedPkgJson which no longer has 'dependencies'
+      if (extractedPkgJson.peerDependencies) {
+        for (const [name, version] of Object.entries(extractedPkgJson.peerDependencies)) {
           rootPackageJson.dependencies[name] = version;
         }
       }
