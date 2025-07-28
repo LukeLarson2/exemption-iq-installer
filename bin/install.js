@@ -90,6 +90,14 @@ import { pipeline } from "stream/promises";
       rootPackageJson.dependencies = rootPackageJson.dependencies || {};
       rootPackageJson.dependencies["exemption-iq"] = "file:vendor/exemption-iq";
 
+      // Add peer dependencies from the downloaded package
+      const downloadedPkgJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf-8"));
+      if (downloadedPkgJson.peerDependencies) {
+        for (const [name, version] of Object.entries(downloadedPkgJson.peerDependencies)) {
+          rootPackageJson.dependencies[name] = version;
+        }
+      }
+
       fs.writeFileSync(rootPackagePath, JSON.stringify(rootPackageJson, null, 2));
       console.log("🛠️  Patched package.json with exemption-iq dependency");
     }
@@ -128,6 +136,18 @@ import { pipeline } from "stream/promises";
     await execa("npm", ["install"], { stdio: "inherit" });
 
     console.log(`\n🎉 Done! Exemption IQ @${version} has been installed and initialized.`);
+
+    console.log(`\n
+📄 Don't forget to configure your .env:
+────────────────────────────────────────────
+EIQ_USERNAME=your-exemptioniq-username
+EIQ_PASSWORD=your-exemptioniq-password
+AVATAX_COMPANY_CODE=your-avatax-company-code
+AVATAX_API_BASE=(sandbox: https://sandbox-rest.avatax.com/api/v2) (prod: https://rest.avatax.com/api/v2)
+────────────────────────────────────────────
+
+🧠 You may need to proxy or route requests in non-Next frameworks (e.g., Express, Remix).
+`);
     console.log("🧹 To uninstall, run:");
     console.log("   node vendor/exemption-iq/dist/bin/init.js --uninstall");
 
